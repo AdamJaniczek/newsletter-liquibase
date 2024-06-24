@@ -21,6 +21,18 @@
             <label for="birthDate" class="form-label">Data Urodzenia</label>
             <input type="date" id="birthDate" th:field="*{birthDate}" class="form-control" required>
         </div>
+        <div class="mb-3">
+            <label for="birthDate" class="form-label">Adres e-mail</label>
+            <input type="text" th:field="*{eMail}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="*{newsletter}">
+                <label class="form-check-label">
+                    Newsletter
+                </label>
+            </div>
+        </div>
         <button type="submit" class="btn btn-primary">Zapisz</button>
     </form>
 </div>

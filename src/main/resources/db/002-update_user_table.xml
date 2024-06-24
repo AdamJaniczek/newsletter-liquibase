@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="AdamJaniczek" id="002-update_user_table">
+
+        <addColumn tableName="users">
+            <column name="e_mail" type="varchar(30)">
+
+            </column>
+            <column name="newsletter" type="tinyint(1)" defaultValueBoolean="0">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+
+        <update tableName="users">
+            <column name="e_mail" value="jankowalski@gmail.com"></column>
+            <where>id=1</where>
+        </update>
+        <update tableName="users">
+            <column name="e_mail" value="annanowak@onet.pl"></column>
+            <column name="newsletter" value="1"></column>
+            <where>id=2</where>
+        </update>
+        <update tableName="users">
+            <column name="e_mail" value="piotrzielinski@o2.pl"></column>
+            <where>id=3</where>
+        </update>
+
+    </changeSet>
+
+
+</databaseChangeLog>

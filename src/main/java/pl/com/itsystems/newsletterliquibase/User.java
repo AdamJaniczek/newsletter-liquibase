@@ -17,20 +17,28 @@ public class User {
 
     private LocalDate birthDate;
 
+    private String eMail;
+
+    private Boolean newsletter;
+
     public User() {
     }
 
-    public User(String firstName, String lastName, LocalDate birthDate) {
+    public User(String firstName, String lastName, LocalDate birthDate, String eMail, Boolean newsletter) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
+        this.eMail = eMail;
+        this.newsletter = newsletter;
     }
 
-    public User(long id, String firstName, String lastName, LocalDate birthDate) {
+    public User(long id, String firstName, String lastName, LocalDate birthDate, String eMail, Boolean newsletter) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
+        this.eMail = eMail;
+        this.newsletter = newsletter;
     }
 
     public long getId() {
@@ -63,5 +71,21 @@ public class User {
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
+    public Boolean getNewsletter() {
+        return newsletter;
+    }
+
+    public void setNewsletter(Boolean newsletter) {
+        this.newsletter = newsletter;
     }
 }

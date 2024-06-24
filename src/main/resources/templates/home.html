@@ -15,6 +15,8 @@
             <th>Imię</th>
             <th>Nazwisko</th>
             <th>Data Urodzenia</th>
+            <th>Adres e-mail</th>
+            <th>Newsletter</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +25,9 @@
             <td th:text="${user.firstName}"></td>
             <td th:text="${user.lastName}"></td>
             <td th:text="${user.birthDate}"></td>
+            <td th:text="${user.eMail}"></td>
+            <td th:if="${user.newsletter}">Tak</td>
+            <td th:unless="${user.newsletter}">Nie</td>
         </tr>
         </tbody>
     </table>
