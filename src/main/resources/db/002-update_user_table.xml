@@ -11,24 +11,10 @@
             <column name="e_mail" type="varchar(30)">
 
             </column>
-            <column name="newsletter" type="tinyint(1)" defaultValueBoolean="0">
+            <column name="newsletter" type="boolean" defaultValueBoolean="false">
                 <constraints nullable="false"/>
             </column>
         </addColumn>
-
-        <update tableName="users">
-            <column name="e_mail" value="jankowalski@gmail.com"></column>
-            <where>id=1</where>
-        </update>
-        <update tableName="users">
-            <column name="e_mail" value="annanowak@onet.pl"></column>
-            <column name="newsletter" value="1"></column>
-            <where>id=2</where>
-        </update>
-        <update tableName="users">
-            <column name="e_mail" value="piotrzielinski@o2.pl"></column>
-            <where>id=3</where>
-        </update>
 
     </changeSet>
 

@@ -1,6 +1,8 @@
 package pl.com.itsystems.newsletterliquibase;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.Type;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import java.time.LocalDate;
 
@@ -19,12 +21,12 @@ public class User {
 
     private String eMail;
 
-    private Boolean newsletter;
+    private boolean newsletter;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, LocalDate birthDate, String eMail, Boolean newsletter) {
+    public User(String firstName, String lastName, LocalDate birthDate, String eMail, boolean newsletter) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
@@ -32,7 +34,7 @@ public class User {
         this.newsletter = newsletter;
     }
 
-    public User(long id, String firstName, String lastName, LocalDate birthDate, String eMail, Boolean newsletter) {
+    public User(long id, String firstName, String lastName, LocalDate birthDate, String eMail, boolean newsletter) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -81,11 +83,11 @@ public class User {
         this.eMail = eMail;
     }
 
-    public Boolean getNewsletter() {
+    public boolean getNewsletter() {
         return newsletter;
     }
 
-    public void setNewsletter(Boolean newsletter) {
+    public void setNewsletter(boolean newsletter) {
         this.newsletter = newsletter;
     }
 }
