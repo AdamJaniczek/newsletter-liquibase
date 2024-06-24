@@ -9,10 +9,8 @@
 
         <addColumn tableName="users">
             <column name="e_mail" type="varchar(30)">
-
             </column>
             <column name="newsletter" type="boolean" defaultValueBoolean="false">
-                <constraints nullable="false"/>
             </column>
         </addColumn>
 

@@ -1,9 +1,8 @@
 package pl.com.itsystems.newsletterliquibase;
 
-import jakarta.persistence.*;
-import org.hibernate.annotations.Type;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -17,6 +16,7 @@ public class User {
 
     private String lastName;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
     private String eMail;
